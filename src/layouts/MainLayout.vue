@@ -11,9 +11,18 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title> Talkin' bout piss </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>
+          <q-btn
+            flat
+            dense
+            round
+            icon="apps"
+            aria-label="Menu"
+            @click="toggleLeftDrawer"
+          />
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -22,8 +31,8 @@
         <q-list bordered>
           <q-expansion-item
             group="somegroup"
-            icon="explore"
-            label="First"
+            icon="settings"
+            label="Settings"
             default-opened
             header-class="text-primary"
           >
@@ -41,8 +50,8 @@
 
           <q-expansion-item
             group="somegroup"
-            icon="perm_identity"
-            label="Second"
+            icon="group"
+            label="Staffing"
             header-class="text-teal"
           >
             <q-card>
@@ -59,8 +68,8 @@
 
           <q-expansion-item
             group="somegroup"
-            icon="shopping_cart"
-            label="Third"
+            icon="post_add"
+            label="Planning"
             header-class="text-purple"
           >
             <q-card>
@@ -77,12 +86,62 @@
 
           <q-expansion-item
             group="somegroup"
-            icon="bluetooth"
-            label="Fourth"
-            header-class="bg-teal text-white"
-            expand-icon-class="text-white"
+            icon="assignment"
+            label="Reporting"
+            header-class="text-orange"
           >
-            <q-card class="bg-teal-2">
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-separator />
+
+          <q-expansion-item
+            group="somegroup"
+            icon="pending_actions"
+            label="Monitoring"
+            header-class="text-red"
+          >
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-separator />
+
+          <q-expansion-item
+            group="somegroup"
+            icon="holiday_village"
+            label="Multi-School"
+            header-class="text-green"
+          >
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-separator />
+
+          <q-expansion-item
+            group="somegroup"
+            icon="edit_note"
+            label="Reforecasting"
+            header-class="text-pink"
+          >
+            <q-card>
               <q-card-section>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
