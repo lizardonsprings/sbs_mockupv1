@@ -11,32 +11,88 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <q-toolbar-title> Quasar App </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+      <div class="q-pa-md" style="max-width: 350px">
+        <q-list bordered>
+          <q-expansion-item
+            group="somegroup"
+            icon="explore"
+            label="First"
+            default-opened
+            header-class="text-primary"
+          >
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+          <q-separator />
+
+          <q-expansion-item
+            group="somegroup"
+            icon="perm_identity"
+            label="Second"
+            header-class="text-teal"
+          >
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+
+          <q-separator />
+
+          <q-expansion-item
+            group="somegroup"
+            icon="shopping_cart"
+            label="Third"
+            header-class="text-purple"
+          >
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+
+          <q-separator />
+
+          <q-expansion-item
+            group="somegroup"
+            icon="bluetooth"
+            label="Fourth"
+            header-class="bg-teal text-white"
+            expand-icon-class="text-white"
+          >
+            <q-card class="bg-teal-2">
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
+                numquam, dolorum officiis modi facere maiores architecto
+                suscipit iste eveniet doloribus ullam aliquid.
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+        </q-list>
+      </div>
     </q-drawer>
 
     <q-page-container>
@@ -46,71 +102,20 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
-  components: {
-    EssentialLink
-  },
-
-  setup () {
-    const leftDrawerOpen = ref(false)
+  setup() {
+    const leftDrawerOpen = ref(false);
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+    };
+  },
+});
 </script>
