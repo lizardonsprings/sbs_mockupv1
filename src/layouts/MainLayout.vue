@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header>
       <q-toolbar>
         <q-btn
           flat
@@ -8,10 +8,11 @@
           round
           icon="menu"
           aria-label="Menu"
+          color="blue"
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Talkin' bout piss </q-toolbar-title>
+        <q-toolbar-title> </q-toolbar-title>
 
         <div>
           <q-btn
@@ -20,21 +21,22 @@
             round
             icon="apps"
             aria-label="Menu"
+            color="blue"
             @click="toggleLeftDrawer"
           />
         </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <div class="q-pa-md" style="max-width: 350px">
-        <q-list bordered>
+    <q-drawer width="200" v-model="leftDrawerOpen" show-if-above bordered>
+      <div style="max-width: 350px">
+        <q-list>
           <q-expansion-item
             group="somegroup"
             icon="settings"
             label="Settings"
             default-opened
-            header-class="text-primary"
+            header-class="text-blue"
           >
             <q-card>
               <q-card-section>
