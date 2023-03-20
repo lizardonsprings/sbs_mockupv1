@@ -12,7 +12,17 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> </q-toolbar-title>
+        <q-toolbar-title>
+          <q-breadcrumbs class="text-blue" active-color="black">
+            <q-breadcrumbs-el label="Great Academies Trust" icon="home" />
+            <q-breadcrumbs-el
+              label="Initial Budget 2023/24"
+              icon="assignment"
+            />
+            <q-breadcrumbs-el label="Planning" icon="widgets" />
+            <q-breadcrumbs-el label="Budget Entries" />
+          </q-breadcrumbs>
+        </q-toolbar-title>
 
         <div>
           <q-btn
@@ -30,6 +40,9 @@
 
     <q-drawer width="200" v-model="leftDrawerOpen" show-if-above bordered>
       <div style="max-width: 350px">
+        <div class="mainlogo">
+          <img src="budgets2.png" width="180" />
+        </div>
         <q-list>
           <q-expansion-item
             group="somegroup"
