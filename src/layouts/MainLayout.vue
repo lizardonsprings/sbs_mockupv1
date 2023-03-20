@@ -2,27 +2,38 @@
   <q-layout view="lHh Lpr lFf">
     <q-header>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          color="blue"
-          @click="toggleLeftDrawer"
-        />
+        <q-breadcrumbs class="text-blue" active-color="black">
+          <q-breadcrumbs-el
+            label="Great Academies Trust"
+            icon="home"
+            to="/"
+            @click="onSchoolClick"
+          />
+          <q-breadcrumbs-el
+            label="Initial Budget 2023/24"
+            icon="assignment"
+            to="/"
+            @click="onBudgetClick"
+          />
+          <q-breadcrumbs-el label="Planning" icon="widgets" />
+          <q-breadcrumbs-el label="Budget Entries" />
+        </q-breadcrumbs>
 
-        <q-toolbar-title>
-          <q-breadcrumbs class="text-blue" active-color="black">
-            <q-breadcrumbs-el label="Great Academies Trust" icon="home" />
-            <q-breadcrumbs-el
-              label="Initial Budget 2023/24"
-              icon="assignment"
-            />
-            <q-breadcrumbs-el label="Planning" icon="widgets" />
-            <q-breadcrumbs-el label="Budget Entries" />
-          </q-breadcrumbs>
-        </q-toolbar-title>
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+
+        <q-input v-model="search" placeholder="Search">
+          <template v-slot:append>
+            <q-icon name="search" />
+
+            <q-space />
+          </template>
+        </q-input>
+
+        <q-space />
 
         <div>
           <q-btn
