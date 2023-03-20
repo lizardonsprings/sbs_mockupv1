@@ -1,3 +1,23 @@
 // app global css in SCSS form
 .q-drawer {
 }
+
+.data-table {
+  position: absolute;
+  padding-top: 45px;
+  padding-left: 14px;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: #f7eeee;
+}
+
+tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.mainlogo {
+  padding-top: 9px;
+  padding-left: 7px;
+}
