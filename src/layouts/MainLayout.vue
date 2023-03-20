@@ -22,10 +22,8 @@
         <q-space />
         <q-space />
         <q-space />
-        <q-space />
-        <q-space />
 
-        <q-input v-model="search" placeholder="Search">
+        <q-input v-model="search" placeholder="Search SBS Budgets..">
           <template v-slot:append>
             <q-icon name="search" />
 
@@ -49,135 +47,45 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer width="200" v-model="leftDrawerOpen" show-if-above bordered>
-      <div style="max-width: 350px">
+    <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="500">
+      <q-scroll-area class="fit">
         <div class="mainlogo">
           <img src="budgets2.png" width="180" />
         </div>
-        <q-list>
-          <q-expansion-item
-            group="somegroup"
-            icon="settings"
-            label="Settings"
-            default-opened
-            header-class="text-blue"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
+        <q-list padding class="menu-list">
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="inbox" />
+            </q-item-section>
 
-          <q-separator />
+            <q-item-section> Settings </q-item-section>
+          </q-item>
 
-          <q-expansion-item
-            group="somegroup"
-            icon="group"
-            label="Staffing"
-            header-class="text-teal"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="star" />
+            </q-item-section>
 
-          <q-separator />
+            <q-item-section> Staffing </q-item-section>
+          </q-item>
 
-          <q-expansion-item
-            group="somegroup"
-            icon="post_add"
-            label="Planning"
-            header-class="text-purple"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="send" />
+            </q-item-section>
 
-          <q-separator />
+            <q-item-section> Planning </q-item-section>
+          </q-item>
 
-          <q-expansion-item
-            group="somegroup"
-            icon="assignment"
-            label="Reporting"
-            header-class="text-orange"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
-          <q-separator />
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="drafts" />
+            </q-item-section>
 
-          <q-expansion-item
-            group="somegroup"
-            icon="pending_actions"
-            label="Monitoring"
-            header-class="text-red"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
-          <q-separator />
-
-          <q-expansion-item
-            group="somegroup"
-            icon="holiday_village"
-            label="Multi-School"
-            header-class="text-green"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
-          <q-separator />
-
-          <q-expansion-item
-            group="somegroup"
-            icon="edit_note"
-            label="Reforecasting"
-            header-class="text-pink"
-          >
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
-                numquam, dolorum officiis modi facere maiores architecto
-                suscipit iste eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
+            <q-item-section> Reporting </q-item-section>
+          </q-item>
         </q-list>
-      </div>
+      </q-scroll-area>
     </q-drawer>
 
     <q-page-container>
