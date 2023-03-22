@@ -17,10 +17,22 @@ tr:nth-child(odd) {
 }
 
 .mainlogo {
-  padding-top: 10px;
+  padding-top: 11px;
   padding-left: 10px;
 }
 
 .q-toolbar-title {
   font-size: 0.5rem !important;
+}
+
+.menu-list {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-white {
+  padding-left: 0px;
+}
+
+.q-item-section {
+  padding-right: 0px;
 }

@@ -47,7 +47,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="500">
+    <q-drawer v-model="drawer" show-if-above :width="260" :breakpoint="500">
       <q-scroll-area class="fit">
         <div class="mainlogo">
           <img src="budgets1.png" width="172" />
