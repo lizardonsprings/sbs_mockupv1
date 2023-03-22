@@ -47,44 +47,78 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="500">
+    <q-drawer v-model="drawer" show-if-above :width="180" :breakpoint="500">
       <q-scroll-area class="fit">
         <div class="mainlogo">
-          <img src="budgets2.png" width="180" />
+          <img src="budgets2.png" width="155" />
         </div>
-        <q-list padding class="menu-list">
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="inbox" />
-            </q-item-section>
+        <div class="text-white">
+          <q-list padding class="menu-list">
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="settings" />
+              </q-item-section>
 
-            <q-item-section> Settings </q-item-section>
-          </q-item>
+              <q-item-section> Settings </q-item-section>
+            </q-item>
 
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="star" />
-            </q-item-section>
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="group" />
+              </q-item-section>
 
-            <q-item-section> Staffing </q-item-section>
-          </q-item>
+              <q-item-section> Staffing </q-item-section>
+            </q-item>
 
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="send" />
-            </q-item-section>
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="content_paste" />
+              </q-item-section>
 
-            <q-item-section> Planning </q-item-section>
-          </q-item>
+              <q-item-section> Planning </q-item-section>
+            </q-item>
 
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="drafts" />
-            </q-item-section>
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="pie_chart" />
+              </q-item-section>
 
-            <q-item-section> Reporting </q-item-section>
-          </q-item>
-        </q-list>
+              <q-item-section> Reporting </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="insights" />
+              </q-item-section>
+
+              <q-item-section> Monitoring </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="domain" />
+              </q-item-section>
+
+              <q-item-section> Multi-School </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="settings" />
+              </q-item-section>
+
+              <q-item-section> Administrator </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="sync" />
+              </q-item-section>
+
+              <q-item-section> Sync Access </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
       </q-scroll-area>
     </q-drawer>
 
