@@ -47,10 +47,10 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="drawer" show-if-above :width="180" :breakpoint="500">
+    <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="500">
       <q-scroll-area class="fit">
         <div class="mainlogo">
-          <img src="budgets2.png" width="155" />
+          <img src="budgets1.png" width="172" />
         </div>
         <div class="text-white">
           <q-list padding class="menu-list">
